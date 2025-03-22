@@ -1,5 +1,6 @@
 package com.ok.functionalities.userabilities;
 
+import com.ok.functionalities.filehandling.GetUserData;
 import com.ok.functionalities.filehandling.SearchFile;
 
 import java.util.*;
@@ -21,6 +22,7 @@ public class LoginHandle {
 
             if(SearchFile.search(username)){
                 System.out.println("User Found");
+                GetUserData.seeData(username);
             }else{
                 System.out.println("\033[31mNo user with username "+username+" found in the records\033[0m");
                 return;
